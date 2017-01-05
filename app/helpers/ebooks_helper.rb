@@ -1,0 +1,2 @@
+module EbooksHelper
+end

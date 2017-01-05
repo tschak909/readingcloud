@@ -60,6 +60,8 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.4)
     debug_inspector (0.0.2)
+    dropzonejs-rails (0.7.3)
+      rails (> 3.1)
     epub-parser (0.2.7)
       addressable (>= 2.3.5)
       archive-zip
@@ -176,6 +178,7 @@ DEPENDENCIES
   bootstrap
   byebug
   coffee-rails (~> 4.2)
+  dropzonejs-rails
   epub-parser
   jbuilder (~> 2.5)
   jquery-rails

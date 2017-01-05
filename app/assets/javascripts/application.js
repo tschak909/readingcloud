@@ -19,3 +19,4 @@
 //= require reader.min
 //= require zip.min
 //= require localforage.min
+//= require dropzone

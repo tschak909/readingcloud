@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170105063659) do
+ActiveRecord::Schema.define(version: 20170105071407) do
 
   create_table "ebooks", force: :cascade do |t|
     t.string   "originalfile"
