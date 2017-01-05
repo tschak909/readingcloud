@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170105071407) do
+ActiveRecord::Schema.define(version: 20170105212429) do
 
   create_table "ebooks", force: :cascade do |t|
     t.string   "originalfile"
@@ -31,8 +31,12 @@ ActiveRecord::Schema.define(version: 20170105071407) do
     t.string   "types"
     t.string   "uniqueid"
     t.string   "epubver"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "book_file_name"
+    t.string   "book_content_type"
+    t.integer  "book_file_size"
+    t.datetime "book_updated_at"
   end
 
 end
