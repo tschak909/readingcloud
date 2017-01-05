@@ -43,7 +43,12 @@ GEM
     archive-zip (0.9.0)
       io-like (~> 0.3.0)
     arel (7.1.4)
+    autoprefixer-rails (6.6.1)
+      execjs
     bcrypt (3.1.11)
+    bootstrap (4.0.0.alpha5)
+      autoprefixer-rails (>= 6.0.3)
+      sass (>= 3.4.19)
     builder (3.2.2)
     byebug (9.0.6)
     coffee-rails (4.2.1)
@@ -168,6 +173,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
+  bootstrap
   byebug
   coffee-rails (~> 4.2)
   epub-parser
