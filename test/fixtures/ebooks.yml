@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  originalfile: MyString
+  title: MyString
+  titles: MyString
+  languages: MyString
+  contributors: MyString
+  coverages: MyString
+  creators: MyString
+  dates: MyString
+  descriptions: MyString
+  formats: MyString
+  publishers: MyString
+  relations: MyString
+  rights: MyString
+  sources: MyString
+  subjects: MyString
+  types: MyString
+  uniqueid: MyString
+  epubver: MyString
+
+two:
+  originalfile: MyString
+  title: MyString
+  titles: MyString
+  languages: MyString
+  contributors: MyString
+  coverages: MyString
+  creators: MyString
+  dates: MyString
+  descriptions: MyString
+  formats: MyString
+  publishers: MyString
+  relations: MyString
+  rights: MyString
+  sources: MyString
+  subjects: MyString
+  types: MyString
+  uniqueid: MyString
+  epubver: MyString

@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require epub.min
+//= require hooks.min
+//= require reader.min
+//= require zip.min
+//= require localforage.min
