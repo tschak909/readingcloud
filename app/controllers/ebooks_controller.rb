@@ -55,6 +55,11 @@ class EbooksController < ApplicationController
     end
   end
 
+  def show
+    @ebook = Ebook.find(params[:id])
+    render :layout => "reader"
+  end
+  
   private
   
   def ebook_params
