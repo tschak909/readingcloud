@@ -1,10 +1,12 @@
 class EbooksController < ApplicationController
 
   def index
+    @ebooks = Ebook.order(:title).page(params[:page])
   end
 
   def new
     @ebook = Ebook.new
+    @ebook.cover = "foo"
     @ebook.title = "foo"
     @ebook.titles = "foo"
     @ebook.languages = "foo"
@@ -26,6 +28,26 @@ class EbooksController < ApplicationController
 
   def create
     @ebook = Ebook.create(ebook_params)
+    p = EPUB::Parser.parse(@ebook.book.path)
+    @ebook.cover = "data:"+p.cover_image.media_type+"; base64," + Base64.encode64(p.cover_image.read) unless p.cover_image.nil?
+    @ebook.title = p.title
+    @ebook.titles = p.metadata.to_h[:titles][0].to_s unless p.metadata.to_h[:titles].nil?
+    @ebook.languages = p.metadata.to_h[:languages][0].to_s unless p.metadata.to_h[:languages].nil?
+    @ebook.contributors = p.metadata.to_h[:contributors][0].to_s unless p.metadata.to_h[:contributors].nil?
+    @ebook.coverages = p.metadata.to_h[:coverages][0].to_s unless p.metadata.to_h[:coverages].nil?
+    @ebook.creators = p.metadata.to_h[:creators][0].to_s unless p.metadata.to_h[:creators].nil?
+    @ebook.dates = p.metadata.to_h[:dates][0].to_s unless p.metadata.to_h[:dates].nil?
+    @ebook.descriptions = p.metadata.to_h[:descriptions][0].to_s unless p.metadata.to_h[:descriptions].nil?
+    @ebook.formats = p.metadata.to_h[:formats][0].to_s unless p.metadata.to_h[:formats].nil?
+    @ebook.publishers = p.metadata.to_h[:publishers][0].to_s unless p.metadata.to_h[:publishers].nil?
+    @ebook.relations = p.metadata.to_h[:relations][0].to_s unless p.metadata.to_h[:relations].nil?
+    @ebook.rights = p.metadata.to_h[:rights][0].to_s unless p.metadata.to_h[:rights].nil?
+    @ebook.sources = p.metadata.to_h[:sources][0].to_s unless p.metadata.to_h[:sources].nil?
+    @ebook.subjects = p.metadata.to_h[:subjects][0].to_s unless p.metadata.to_h[:subjects].nil?
+    @ebook.types = p.metadata.to_h[:types][0].to_s unless p.metadata.to_h[:types].nil?
+    @ebook.uniqueid = p.metadata.to_h[:uniqueid][0].to_s unless p.metadata.to_h[:uniqueid].nil?
+    @ebook.epubver = p.metadata.to_h[:epubver][0].to_s unless p.metadata.to_h[:epubver].nil?
+
     if @ebook.save
       render json: { message: "success" }, :status => 200
     else
