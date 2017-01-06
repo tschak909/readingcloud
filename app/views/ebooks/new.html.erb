@@ -1,0 +1,24 @@
+<%= form_for(@ebook, html: { multipart: true}) do |f|  %>
+  <%= f.hidden_field :title %>
+  <%= f.hidden_field :titles %>
+  <%= f.hidden_field :languages %>
+  <%= f.hidden_field :contributors %>
+  <%= f.hidden_field :coverages %>
+  <%= f.hidden_field :creators %>
+  <%= f.hidden_field :dates %>
+  <%= f.hidden_field :descriptions %>
+  <%= f.hidden_field :formats %>
+  <%= f.hidden_field :publishers %>
+  <%= f.hidden_field :relations %>
+  <%= f.hidden_field :rights %>
+  <%= f.hidden_field :sources %>
+  <%= f.hidden_field :subjects %>
+  <%= f.hidden_field :types %>
+  <%= f.hidden_field :uniqueid %>
+  <%= f.hidden_field :epubver %>
+
+<div class="fallback">
+  <%= f.file_field :book %><br>
+  <%= f.submit "Upload" %>
+</div>
+<% end %>
