@@ -20,3 +20,4 @@
 //= require zip.min
 //= require localforage.min
 //= require dropzone
+//= require jquery.infinitescroll
