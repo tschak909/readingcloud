@@ -38,6 +38,7 @@
           <div id="title-controls">
             <a id="bookmark" class="icon-bookmark-empty">Bookmark</a>
             <a id="fullscreen" class="icon-resize-full">Fullscreen</a>
+	    <%= link_to "Delete", url_for(action: :destroy, id: @ebook.id), method: :delete, class: "eicon-trash", data: {confirm: "Are you sure?"} %>
 	    <a id="close" href="<%= ebooks_path %>" class="icon-cancel-circled">Close</a>
           </div>
         </div>

@@ -61,6 +61,13 @@ class EbooksController < ApplicationController
     @ebook = Ebook.find(params[:id])
     render :layout => "reader"
   end
+
+  def destroy
+    @ebook = Ebook.find(params[:id])
+    @ebook.book.destroy
+    @ebook.destroy
+    redirect_to ebooks_url
+  end
   
   private
   
