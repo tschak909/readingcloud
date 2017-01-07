@@ -51,7 +51,6 @@ end
 
 # additional libs
 gem 'epub-parser'
-gem 'bootstrap'
 gem 'dropzonejs-rails'
 gem 'paperclip'
 gem 'kaminari'

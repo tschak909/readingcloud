@@ -16,6 +16,7 @@
 //= require_tree .
 //= require dropzone
 //= require jquery.infinitescroll
+//= require bootstrap.min
 //= require bootstrap-table
 
 $(document).ready(function($) {
