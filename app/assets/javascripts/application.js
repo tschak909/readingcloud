@@ -22,3 +22,10 @@
 //= require screenfull.min
 //= require dropzone
 //= require jquery.infinitescroll
+//= require bootstrap-table
+
+$(document).ready(function($) {
+    $(".ebook").click(function() {
+	window.location = $(this).attr("data-href");
+    });
+});

@@ -1,8 +1,8 @@
-<table id="ebooks">
+<table id="ebooks" data-toggle="table" data-search="true">
   <thead>
-    <th>Cover</th>
-    <th>Title</th>
-    <th>Author(s)</th>
+    <th data-field="Cover">Cover</th>
+    <th data-field="Title" data-sortable="true">Title</th>
+    <th data-field="Author(s)" data-sortable="true">Author(s)</th>
   </thead>
   <tbody class="page">
     <%= render @ebooks %>

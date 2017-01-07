@@ -1,5 +1,5 @@
-<tr class="ebook">
-  <td><img src="<%= ebook.cover %>" alt="<%= ebook.id %>" /></td>
+<tr class="ebook" data-href="<%= ebook_url(ebook) %>">
+  <td><img width="128" style="border: 2px solid #AAA; padding: 6px; border-radius: 12px;" src="<%= ebook.cover %>" alt="<%= ebook.id %>" /></td>
   <td><%= ebook.title %></td>
   <td><%= ebook.creators %></td>
 </tr>
