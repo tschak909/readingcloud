@@ -19,5 +19,6 @@
 //= require reader.min
 //= require zip.min
 //= require localforage.min
+//= require screenfull.min
 //= require dropzone
 //= require jquery.infinitescroll
