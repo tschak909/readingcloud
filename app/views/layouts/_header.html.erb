@@ -8,6 +8,9 @@
     <li class="nav-item">
       <a class="nav-link" href="#">About</a>
     </li>
+    <li class="nav-item">
+      <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => :nav_link) %>
+    </li>
   </ul>
   <form class="form-inline pull-xs-right">
     <input class="form-control" type="text" placeholder="Search">

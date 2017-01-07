@@ -1,5 +1,7 @@
 class EbooksController < ApplicationController
 
+  before_filter :authenticate_user!
+  
   def index
     @ebooks = Ebook.order(:title).page(params[:page])
   end
