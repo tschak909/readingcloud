@@ -1,3 +1,6 @@
+<% if @ebooks.count < 1 %>
+   <%= render "nobooks" %>
+<% else %>
 <table id="ebooks" data-toggle="table" data-search="true">
   <thead>
     <th data-field="Cover">Cover</th>
@@ -9,3 +12,4 @@
   </tbody>
 </table>
 <%= paginate @ebooks %>
+<% end %>
