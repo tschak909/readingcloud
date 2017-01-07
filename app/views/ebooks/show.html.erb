@@ -53,14 +53,16 @@
       <div class="overlay"></div>
 
         <script>
-            "use strict";
-
-            document.onreadystatechange = function () {
-              if (document.readyState == "complete") {
-                EPUBJS.filePath = "js/libs/";
-                EPUBJS.cssPath = "/css/";
-                window.reader = ePubReader("<%= get_url(@ebook.book.url) %>");
-              }
-            };
-
+          "use strict";
+	  
+          document.onreadystatechange = function () {
+            if (document.readyState == "complete") {
+              EPUBJS.filePath = "js/libs/";
+              EPUBJS.cssPath = "/css/";
+              window.reader = ePubReader("<%= get_url(@ebook.book.url) %>");
+              $("div#main").hammer().bind("swipeleft", function(ev) { window.reader.book.nextPage(); }).bind("swiperight",function(ev) { window.reader.book.prevPage(); });
+	  
+            }
+          };
+	  
         </script>

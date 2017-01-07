@@ -8,3 +8,6 @@
 //= require zip.min
 //= require localforage.min
 //= require screenfull.min
+//= require hammer
+//= require jquery.hammer
+
