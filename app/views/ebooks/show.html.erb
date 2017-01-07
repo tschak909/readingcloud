@@ -37,8 +37,8 @@
           </div>
           <div id="title-controls">
             <a id="bookmark" class="icon-bookmark-empty">Bookmark</a>
-            <a id="setting" class="icon-cog">Settings</a>
             <a id="fullscreen" class="icon-resize-full">Fullscreen</a>
+	    <a id="close" href="<%= ebooks_path %>" class="icon-cancel-circled">Close</a>
           </div>
         </div>
 
@@ -48,17 +48,6 @@
         <div id="next" class="arrow">›</div>
 
         <div id="loader"><img src="<%= image_path('loader.gif') %>"></div>
-      </div>
-      <div class="modal md-effect-1" id="settings-modal">
-          <div class="md-content">
-              <h3>Settings</h3>
-              <div>
-                  <p>
-                    <input type="checkbox" id="sidebarReflow" name="sidebarReflow">Reflow text when sidebars are open.
-                  </p>
-              </div>
-              <div class="closer icon-cancel-circled"></div>
-          </div>
       </div>
       <div class="overlay"></div>
 
