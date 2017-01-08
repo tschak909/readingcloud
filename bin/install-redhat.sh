@@ -8,7 +8,7 @@ echo "Please enter your user password, when prompted."
 echo "Installing system packages as root"
 
 sudo yum -y groupinstall "Development"
-sudo yum -y install sqlite-devel openssl-devel zlib-devel readline-devel libyaml-devel nodejs git
+sudo yum -y install epel-release sqlite-devel openssl-devel zlib-devel readline-devel libyaml-devel nodejs git
 
 echo "Installing everything else as current user."
 
