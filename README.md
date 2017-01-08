@@ -6,12 +6,14 @@ readingcloud is a simple epub.js based reader for personal use from a web browse
 installing on debian based machines 
 ===================================
 
-To install on debian based machines, Please run the bin/install-debian.sh script.
+To install on debian based machines, Please run the bin/install-debian.sh script from inside readingcloud directory.
+
+Debian by default does not install sudo, or put any users in the sudo group. Please use apt-get install sudo and add yourself to the sudo group, and log out and log back in, if needed.
 
 installing on redhat based machines
 ===================================
 
-To install on debian based machines, Please run the bin/install-redhat.sh script.
+To install on debian based machines, Please run the bin/install-redhat.sh script from inside readingcloud directory.
 
 using the software
 ==================
