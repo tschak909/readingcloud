@@ -15,22 +15,8 @@ echo "Installing everything else as current user."
 git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-. ~/.bashrc
 
-# Install the ruby-build plugin for easy building of rubies.
-mkdir -p ~/.rbenv/plugins
-cd ~/.rbenv/plugins 
-git clone git://github.com/sstephenson/ruby-build.git
-cd $HERE
+echo "Now, please run bin/install_readingcloud.sh to finish the installation process."
 
-rbenv install 2.4.0
-rbenv global 2.4.0
-
-gem install bundler
-
-bundle install
-
-rake db:setup
-
-echo "You can now start the server using 'rails s'"
+exec $SHELL
 
