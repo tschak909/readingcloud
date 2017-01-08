@@ -106,7 +106,6 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
-    mysql2 (0.4.5)
     nio4r (1.2.1)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
@@ -209,7 +208,6 @@ DEPENDENCIES
   jquery-rails
   kaminari
   listen (~> 3.0.5)
-  mysql2
   paperclip
   rails (~> 5.0.1)
   sass-rails (~> 5.0)
