@@ -7,7 +7,7 @@ echo "Please enter your user password, when prompted."
 
 echo "Installing system packages as root"
 
-sudo apt-get install build-essential libsqlite3-dev libssl-dev zlib1g-dev libreadline-dev libyaml-dev git
+sudo apt-get install build-essential libsqlite3-dev libssl-dev zlib1g-dev libreadline-dev libyaml-dev nodejs git
 
 echo "Installing everything else as current user."
 
@@ -15,13 +15,13 @@ echo "Installing everything else as current user."
 git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-exec $SHELL
+. ~/.bashrc
 
 # Install the ruby-build plugin for easy building of rubies.
 mkdir -p ~/.rbenv/plugins
-cd !$
+cd ~/.rbenv/plugins 
 git clone git://github.com/sstephenson/ruby-build.git
-cd $HERE/..
+cd $HERE
 
 rbenv install 2.4.0
 rbenv global 2.4.0
