@@ -13,7 +13,7 @@ Debian by default does not install sudo, or put any users in the sudo group. Ple
 installing on redhat based machines
 ===================================
 
-To install on debian based machines, Please run the bin/install-redhat.sh script from inside readingcloud directory.
+To install on redhat based machines, Please run the bin/install-redhat.sh script from inside readingcloud directory.
 
 using the software
 ==================
