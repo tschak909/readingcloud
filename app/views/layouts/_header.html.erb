@@ -13,7 +13,8 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 	<li class="<%= 'active' if (current_page?(root_path) || current_page?(ebooks_path)) %>"><%= link_to "Books", root_path, class: "nav-link" %></li>
-	<li class="<%= 'active' if current_page?(new_ebook_path) %>"><%= link_to "Upload Books", new_ebook_path, :class => "nav_link" %></li>
+	<li class="<%= 'active' if current_page?(new_ebook_path) %>"><%= link_to "Upload", new_ebook_path, :class => "nav_link" %></li>
+	<li class="<%= 'active' if current_page?(choose_ebooks_path) %>"><%= link_to "Import", choose_ebooks_path, :class => "nav_link" %></li>
 	<li><%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "nav_link") %></li>
       </ul>
     </div><!--/.nav-collapse -->

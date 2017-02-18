@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <center>
+  <h1 class="display-3">Import from Filesystem</h1>
+  <p class="lead">You can import books from your local filesystem, by entering a path in the field below. <br />The path you specify will be searched recursively for books ending in .epub, and automatically added to the library.</p>
+  </center>
+  
+  <%= form_tag(import_ebooks_path, method: 'post') do %>
+  <div class="form-group row">
+    <%= label_tag 'path', "Local Filesystem Path", class: 'col-2 col-form-label' %>
+    <div class="col-10">
+      <%= text_field_tag 'path', nil, placeholder: 'Enter a location on your filesystem, such as: /tmp', class: 'form-control' %>
+    </div>
+  </div>
+  <%= submit_tag "Import", class: "btn btn-primary" %>
+  <% end %>
+  
+</div>
+

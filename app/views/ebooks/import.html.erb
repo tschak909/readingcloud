@@ -1,0 +1,21 @@
+<div class="jumbotron">
+  <center>
+  <h1 class="display-3">Import Results</h1>
+  <p class="lead">The following eBooks were found at the path <%= @path %> and were processed</p>
+  </center>
+</div>
+
+<% if @ebooks.count < 1 %>
+   <%= render "nobooks" %>
+<% else %>
+<table id="ebooks" data-toggle="table" data-search="true">
+  <thead>
+    <th data-field="Cover">Cover</th>
+    <th data-field="Title" data-sortable="true">Title</th>
+    <th data-field="Author(s)" data-sortable="true">Author(s)</th>
+  </thead>
+  <tbody class="page">
+    <%= render @ebooks %>
+  </tbody>
+</table>
+<% end %>
